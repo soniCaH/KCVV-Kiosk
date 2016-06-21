@@ -1,0 +1,1 @@
+$(document).ready(function(){var o=$("iframe");console.log(o),$(o).css({color:"red"})});
