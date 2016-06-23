@@ -50,6 +50,10 @@ section.has-dark-background {
 @import "../revealjs/css/theme/template/theme";
 // ---------------------------------------------
 
+.ranking {
+	width: 100%;
+}
+
 .highlighted {
 	background: $highlightColor;
 }
