@@ -61,7 +61,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Short ranking with [teamname] highlighted and [number]/2 teams above and below the highlighted team.
@@ -94,7 +94,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Overview of matches for a division. Optional parameters are logo and specific matchday.
@@ -134,7 +134,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display next matches for all teams of a specified reg number.
@@ -163,7 +163,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display next matches for all teams of a specified reg number in a slider.
@@ -192,7 +192,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display previous matches for all teams of a specified reg number.
@@ -221,7 +221,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display prev matches for all teams of a specified reg number in a slider.
@@ -250,7 +250,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
 
@@ -282,7 +282,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display previous match(es) for a specific team in a specific division.
@@ -313,7 +313,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display next match(es) for a specific team in a specific division with logo.
@@ -344,7 +344,7 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     })
 
     // Display previous match(es) for a specific team in a specific division with logo.
@@ -375,5 +375,5 @@ angular.module('footbel', [ ])
                         $scope.ready = true;
                     });
             }
-        }
+        };
     });
