@@ -13,26 +13,7 @@ var headers = {
 };
 
 
-angular.module('footbel', [ ])
-    // .filter('orderObjectBy', function () {
-    //     return function (items, field, reverse) {
-    //         var filtered = [];
-    //         angular.forEach(items, function (item) {
-    //             filtered.push(item);
-    //         });
-    //         filtered.sort(function (a, b) {
-    //             return (
-    //                 parseInt(a[field]) > parseInt(b[field]) ? 1 : -1
-    //             );
-    //         });
-    //         if (reverse) {
-    //             filtered.reverse();
-    //         }
-    //         return filtered;
-    //     };
-    // })
-
-    
+angular.module( 'footbel', [] )
     // General ranking for a complete division.
     .directive('ranking', function ($http) {
         return {
@@ -45,9 +26,7 @@ angular.module('footbel', [ ])
                 teamname: '@teamname'
             },
             templateUrl: 'ranking.tpl.html',
-            link: function ($scope, element) {
-
-            },
+            link: function ($scope, element) {},
             controller: function ($scope) {
                 $scope.ready = false;
                 $scope.rankings = [];
@@ -110,29 +89,39 @@ angular.module('footbel', [ ])
                 matchday: '@matchday'
             },
             templateUrl: 'matches_overview.tpl.html',
-            link: function ($scope, element) {
+            link: function ($scope, element) {},
+            controller: function ($scope, $timeout) {
 
-            },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/prov/' + $scope.province + '/' +
-                    $scope.season + '/' + $scope.division + '/' + $scope.matchday, headers)
-                    .then(function (response) {
+                    $http.get(
+                        base_url + '/matches/prov/' + $scope.province + '/' + $scope.season + '/' + $scope.division + '/' + $scope.matchday, 
+                        headers
+                    ).then(function (response) {
                         $scope.matchesPerDay = [];
-
+                        
                         angular.forEach(response.data, function (match) {
                             if (!$scope.matchesPerDay[match.matchday]) {
                                 $scope.matchesPerDay[match.matchday] = [];
                             }
+                            
                             $scope.matchesPerDay[match.matchday].push(match);
                         });
-
+                        
                         $scope.ready = true;
                     });
+                    
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15*60*1000);
+                };
+
+                // Initial fetch.
+                fetchData();
+                
             }
         };
     })
