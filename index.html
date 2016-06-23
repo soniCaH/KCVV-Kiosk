@@ -19,6 +19,10 @@
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   </head>
 
   <body>
@@ -29,7 +33,8 @@
       <div class="slides">
         <section>
 
-            IMG
+            Matches:
+            <div data-matches_overview data-season="1516" data-province="bra" data-division="3D" data-matchday="5" data-logo="TRUE"></div>
           
         </section>
         <section>
@@ -65,8 +70,9 @@
         history: false,
         center: true,
         loop: true,
+        shuffle: true,
         autoSlide: 5000,
-        viewDistance: 100,
+        viewDistance: 2,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -84,7 +90,7 @@
 
     </script>
 
-    <script type="text/javascript" src="javascript/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="javascript/angular.js"></script>
     <script type="text/javascript" src="javascript/kcvv.js"></script>
 
   </body>
