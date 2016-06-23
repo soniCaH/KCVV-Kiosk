@@ -50,10 +50,36 @@ section.has-dark-background {
 @import "../revealjs/css/theme/template/theme";
 // ---------------------------------------------
 
-.ranking {
+table {
 	width: 100%;
 }
 
 .highlighted {
 	background: $highlightColor;
+}
+
+
+table.matches_overview__with_logo {
+	td {
+		height: 40px;
+		padding: 0;
+		vertical-align: middle;
+
+		&.matches_overview__logo {
+			text-align: center;
+
+			img {
+				border: 0;
+				max-width: 40px;
+				max-height: 40px;
+				height: auto;
+				width: auto;
+			}
+		}
+
+		&.matches_overview__name {
+			text-align: center;
+		}
+	}
+	
 }

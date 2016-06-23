@@ -55,6 +55,15 @@
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
+	"\/matches_next.tpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/matches_next.tpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/matches_overview.tpl.html": {
 		"fileType": 8192,
 		"ignore": 0,

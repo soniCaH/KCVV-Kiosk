@@ -16,7 +16,7 @@
     <th class="ranking__goals-points">Ptn</th>
   </thead>
   <tbody>
-  <tr ng-repeat="ranking in rankings | orderObjectBy:'position'" ng-class="{'highlighted': ranking.team == teamname}">
+  <tr ng-repeat="ranking in rankings | orderBy:'position'" ng-class="{'highlighted': ranking.team == teamname}">
     <td ng-bind="ranking.position"></td>
     <td ng-bind="ranking.team"></td>
     <td ng-bind="ranking.matches"></td>
