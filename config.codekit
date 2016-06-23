@@ -16,21 +16,21 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/javascript\/angular.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/angular-min.js",
+		"outputAbbreviatedPath": "\/javascript\/angular.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
-	"\/javascript\/jquery-3.0.0.min.js": {
+	"\/javascript\/angular.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/javascript\/jquery-3.0.0.min.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/jquery-3.0.0.min-min.js",
+		"inputAbbreviatedPath": "\/javascript\/angular.min.js",
+		"outputAbbreviatedPath": "\/javascript\/angular.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/javascript\/kcvv.js": {
@@ -38,32 +38,21 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/javascript\/kcvv.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/kcvv-min.js",
+		"outputAbbreviatedPath": "\/javascript\/kcvv.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
-	"\/javascript\/min\/angular-min.js": {
+	"\/javascript\/kcvv.min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/javascript\/min\/angular-min.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/min\/angular-min-min.js",
+		"inputAbbreviatedPath": "\/javascript\/kcvv.min.js",
+		"outputAbbreviatedPath": "\/javascript\/kcvv.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/javascript\/min\/kcvv-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/javascript\/min\/kcvv-min.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/min\/kcvv-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/matches_overview.tpl.html": {
@@ -71,6 +60,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/matches_overview.tpl.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/ranking.tpl.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/ranking.tpl.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -508,10 +506,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/Gruntfile.js",
-		"outputAbbreviatedPath": "\/revealjs\/min\/Gruntfile-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/Gruntfile.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/index.html": {
@@ -528,10 +526,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/js\/reveal.js",
-		"outputAbbreviatedPath": "\/revealjs\/js\/min\/reveal-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/js\/reveal.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/lib\/css\/zenburn.css": {
@@ -566,10 +564,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/lib\/js\/classList.js",
-		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/min\/classList-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/classList.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/lib\/js\/head.min.js": {
@@ -577,10 +575,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/lib\/js\/head.min.js",
-		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/min\/head.min-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/head.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/lib\/js\/html5shiv.js": {
@@ -588,10 +586,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/lib\/js\/html5shiv.js",
-		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/min\/html5shiv-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/lib\/js\/html5shiv.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/package.json": {
@@ -610,10 +608,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/highlight\/highlight.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/highlight\/min\/highlight-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/highlight\/highlight.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/markdown\/example.html": {
@@ -651,10 +649,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/markdown.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/min\/markdown-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/markdown.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/markdown\/marked.js": {
@@ -662,10 +660,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/marked.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/min\/marked-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/markdown\/marked.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/math\/math.js": {
@@ -673,10 +671,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/math\/math.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/math\/min\/math-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/math\/math.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/multiplex\/client.js": {
@@ -684,10 +682,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/client.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/min\/client-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/client.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/multiplex\/index.js": {
@@ -695,10 +693,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/index.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/min\/index-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/index.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/multiplex\/master.js": {
@@ -706,10 +704,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/master.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/min\/master-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/multiplex\/master.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/multiplex\/package.json": {
@@ -728,10 +726,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/client.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/min\/client-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/client.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/notes-server\/index.js": {
@@ -739,10 +737,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/index.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/min\/index-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes-server\/index.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/notes-server\/notes.html": {
@@ -768,10 +766,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/notes\/notes.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes\/min\/notes-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/notes\/notes.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/print-pdf\/print-pdf.js": {
@@ -779,10 +777,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/print-pdf\/print-pdf.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/print-pdf\/min\/print-pdf-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/print-pdf\/print-pdf.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/search\/search.js": {
@@ -790,10 +788,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/search\/search.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/search\/min\/search-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/search\/search.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/plugin\/zoom-js\/zoom.js": {
@@ -801,10 +799,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/plugin\/zoom-js\/zoom.js",
-		"outputAbbreviatedPath": "\/revealjs\/plugin\/zoom-js\/min\/zoom-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/plugin\/zoom-js\/zoom.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/README.md": {
@@ -909,10 +907,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/qunit-1.12.0.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/qunit-1.12.0-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/qunit-1.12.0.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/test\/test-markdown-element-attributes.html": {
@@ -929,10 +927,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/test-markdown-element-attributes.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/test-markdown-element-attributes-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/test-markdown-element-attributes.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/test\/test-markdown-slide-attributes.html": {
@@ -949,10 +947,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/test-markdown-slide-attributes.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/test-markdown-slide-attributes-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/test-markdown-slide-attributes.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/test\/test-markdown.html": {
@@ -969,10 +967,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/test-markdown.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/test-markdown-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/test-markdown.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/test\/test-pdf.html": {
@@ -989,10 +987,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/test-pdf.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/test-pdf-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/test-pdf.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/revealjs\/test\/test.html": {
@@ -1009,10 +1007,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/revealjs\/test\/test.js",
-		"outputAbbreviatedPath": "\/revealjs\/test\/min\/test-min.js",
+		"outputAbbreviatedPath": "\/revealjs\/test\/test.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/theme\/kcvve.css": {
@@ -1232,13 +1230,13 @@
 	"jadeCompileDebug": 1,
 	"jadeOutputStyle": 0,
 	"javascriptAutoOutputPathEnabled": 1,
-	"javascriptAutoOutputPathFilenamePattern": "*-min.js",
+	"javascriptAutoOutputPathFilenamePattern": "*.min.js",
 	"javascriptAutoOutputPathRelativePath": "\/min",
 	"javascriptAutoOutputPathReplace1": "",
 	"javascriptAutoOutputPathReplace2": "",
-	"javascriptAutoOutputPathStyle": 2,
+	"javascriptAutoOutputPathStyle": 0,
 	"javascriptCreateSourceMap": 1,
-	"javascriptOutputStyle": 1,
+	"javascriptOutputStyle": 0,
 	"javascriptSyntaxCheckerStyle": 1,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {

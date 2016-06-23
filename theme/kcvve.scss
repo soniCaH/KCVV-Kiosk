@@ -21,7 +21,9 @@ $backgroundColor: #fff;
 $mainColor: #222;
 $headingColor: #222;
 
-$mainFontSize: 38px;
+$highlightColor: #a6e22e;
+
+$mainFontSize: 16px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -47,3 +49,7 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../revealjs/css/theme/template/theme";
 // ---------------------------------------------
+
+.highlighted {
+	background: $highlightColor;
+}
