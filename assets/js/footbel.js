@@ -12,7 +12,7 @@ var headers = {
     }
 };
 
-angular.module( 'footbel', [] )
+angular.module('footbel', [])
     // General ranking for a complete division.
     .directive('ranking', function ($http) {
         return {
@@ -25,8 +25,8 @@ angular.module( 'footbel', [] )
                 teamname: '@teamname'
             },
             templateUrl: 'ranking.tpl.html',
-            link: function ($scope, element) {},
-            controller: function ($scope) {
+            link: function ($scope, element) { },
+            controller: function ($scope, $timeout) {
                 $scope.ready = false;
                 $scope.rankings = [];
 
@@ -58,19 +58,28 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.rankings = [];
+            controller: function ($scope, $timeout) {
 
-                $scope.base_url = base_url;
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.rankings = [];
 
-                $http.get(base_url + '/ranking/short/prov/' + $scope.province + '/' +
-                    $scope.season + '/' + $scope.division + '/' + $scope.teamname +
-                    '/' + $scope.number, headers)
-                    .then(function (response) {
-                        $scope.rankings = response.data;
-                        $scope.ready = true;
-                    });
+                    $scope.base_url = base_url;
+
+                    $http.get(base_url + '/ranking/short/prov/' + $scope.province + '/' +
+                        $scope.season + '/' + $scope.division + '/' + $scope.teamname +
+                        '/' + $scope.number, headers)
+                        .then(function (response) {
+                            $scope.rankings = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -88,7 +97,7 @@ angular.module( 'footbel', [] )
                 matchday: '@matchday'
             },
             templateUrl: 'matches_overview.tpl.html',
-            link: function ($scope, element) {},
+            link: function ($scope, element) { },
             controller: function ($scope, $timeout) {
 
                 function fetchData() {
@@ -115,7 +124,7 @@ angular.module( 'footbel', [] )
                     });
 
                     // Fetch rankings every 15 minutes.
-                    $timeout(fetchData, 15*60*1000);
+                    $timeout(fetchData, 15 * 60 * 1000);
                 };
 
                 // Initial fetch.
@@ -138,18 +147,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/next/' + $scope.season + '/' +
-                    $scope.regnumber, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/next/' + $scope.season + '/' +
+                        $scope.regnumber, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -167,18 +184,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/next/' + $scope.season + '/' +
-                    $scope.regnumber, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/next/' + $scope.season + '/' +
+                        $scope.regnumber, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -196,18 +221,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
-                    $scope.regnumber, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
+                        $scope.regnumber, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -225,18 +258,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
-                    $scope.regnumber, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
+                        $scope.regnumber, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -257,18 +298,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/next/' + $scope.season + '/' +
-                    $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/next/' + $scope.season + '/' +
+                        $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -288,18 +337,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
-                    $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
+                        $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -319,18 +376,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/next/' + $scope.season + '/' +
-                    $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/next/' + $scope.season + '/' +
+                        $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
@@ -350,19 +415,26 @@ angular.module( 'footbel', [] )
             link: function ($scope, element) {
 
             },
-            controller: function ($scope) {
-                $scope.ready = false;
-                $scope.matches = [];
+            controller: function ($scope, $timeout) {
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.matches = [];
 
-                $scope.base_url = base_url;
+                    $scope.base_url = base_url;
 
-                $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
-                    $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
-                    .then(function (response) {
-                        $scope.matches = response.data;
-                        $scope.ready = true;
-                    });
+                    $http.get(base_url + '/matches/prev/' + $scope.season + '/' +
+                        $scope.regnumber + '/' + $scope.division + '/' + $scope.number, headers)
+                        .then(function (response) {
+                            $scope.matches = response.data;
+                            $scope.ready = true;
+                        });
+
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
-    })
-;
+    });
