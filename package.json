@@ -1,0 +1,14 @@
+{
+  "name": "kcvvelewijt",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest"
+  },
+  "dependencies": {
+    "angular": "latest"
+  }
+}

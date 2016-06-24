@@ -1,0 +1,132 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../revealjs/css/theme/template/mixins.scss";
+@import "../../revealjs/css/theme/template/settings.scss";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../revealjs/lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$highlightColor: #a6e22e;
+
+$mainFontSize: 16px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../../revealjs/css/theme/template/theme.scss";
+// ---------------------------------------------
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+table {
+	width: 100%;
+}
+
+.highlighted {
+	background: $highlightColor;
+}
+
+
+table.matches_overview__with_logo {
+	td {
+		height: 40px;
+		padding: 0;
+		vertical-align: middle;
+
+		&.matches_overview__logo {
+			text-align: center;
+
+			img {
+				border: 0;
+				max-width: 40px;
+				max-height: 40px;
+				height: auto;
+				width: auto;
+			}
+		}
+
+		&.matches_overview__name {
+			text-align: center;
+		}
+	}
+
+}
+
+.reveal .slides section {
+	background-color: white;
+}
+.reveal.page .slides section:not(.stack):after, .reveal.page .slides section:not(.stack):before {
+	display: none !important;
+}
+
+.reveal .slides {
+	width: 100% !important;
+	height: 100% !important;
+}
+.reveal .progress span {
+	background: green;
+}
+
+.reveal.page .slides .instafeed {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+.insta-grid {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	.insta-grid__media {
+		flex-basis: 25%;
+		height: 50%;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+}
