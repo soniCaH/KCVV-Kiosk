@@ -1,25 +1,63 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+		clean: {
+	  		css: ['build/css/*'],
+	  		js: ['build/js/*'],
+		},
+
 		uglify: {
-			options: {
-      		mangle: false
-    		},
-		  	my_target: {
-		    files: {
-					'build/js/app.min.js': [
-						'assets/js/footbel.js',
-						'assets/js/instagram.js',
-						'assets/js/kcvv.js',
-				  ]
-			  }
-		  }
+			dev: {
+				options: {
+					mangle: false,
+					compress: false,
+					beautify: true,
+					sourceMap: true,
+					screwIE8: true,
+				},
+				files: {
+						'build/js/app.min.js': [
+							'assets/js/footbel.js',
+							'assets/js/instagram.js',
+							'assets/js/kcvv.js',
+					]
+				}
+			},
+			dist: {
+				options: {
+					mangle: false,
+					compress: true,
+					beautify: false,
+					sourceMap: false,
+					screwIE8: true,
+				},
+				files: {
+						'build/js/app.min.js': [
+							'assets/js/footbel.js',
+							'assets/js/instagram.js',
+							'assets/js/kcvv.js',
+					]
+				}
+		  	}	
 		},
 		sass: {
+		  dev: {
+		  	options: {
+			   style: 'expanded',
+			   compass: true,
+			   sourcemap: 'auto',
+			   debugInfo: true,
+			   lineNumbers: true,
+			},
+		    files: {
+		        'build/css/style.css': 'assets/sass/style.scss'
+		    }
+		  },
 		  dist: {
 		  	options: {
 			   style: 'compressed',
-			   compass: true
+			   compass: true,
+			   sourcemap: 'none',
 			},
 		    files: {
 		        'build/css/style.css': 'assets/sass/style.scss'
@@ -29,22 +67,25 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: ['assets/js/**/*.js'],
-		    	tasks: ['uglify'],
+		    	tasks: ['uglify:dev'],
 			},
 			sass: {
 				files: ['assets/sass/**/*.scss'],
-				tasks: ['sass:dist'],
+				tasks: ['sass:dev'],
 			},
 		}
 	});
 
 	// RUN BY DEFAULT
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['build:dev', 'watch']);
+
+	grunt.registerTask('build:dist', ['clean', 'sass:dist', 'uglify:dist']);
+	grunt.registerTask('build:dev', ['clean', 'sass:dev', 'uglify:dev']);
 
 	// RUN TASKS
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-
+	grunt.loadNpmTasks('grunt-contrib-clean');
 };

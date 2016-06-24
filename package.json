@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "devDependencies": {
     "grunt": "latest",
-    "grunt-contrib-compass": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
   },
   "dependencies": {
     "angular": "latest"

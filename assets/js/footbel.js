@@ -12,7 +12,6 @@ var headers = {
     }
 };
 
-
 angular.module( 'footbel', [] )
 // General ranking for a complete division.
 .directive('ranking', function ($http) {
