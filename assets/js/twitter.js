@@ -1,22 +1,32 @@
 var twitter_api_url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 var username = "kcvve";
-var config = {
-    data : {
-        screen_name: username
-        , callback : "JSON_CALLBACK"
-        , include_rts : true
-        , count: 20
-    },
-    headers: {
-        'Authorization': 'OAuth oauth_consumer_key="GTCdgD6hdEhLmAqcR9Plw"', 
-        'oauth_nonce': "a9ea2a13d36e80633e8b394f4e720b2c", 
-        'oauth_signature': "kj%2FtPtrXllOhBSljk8o%2BprJaokc%3D", 
-        'oauth_signature_method': "HMAC-SHA1", 
-        'oauth_timestamp': "1466859498", 
-        'oauth_token' :"535348055-Rutf002vyJvOE6k85FtaTS0hR6XSIh9ussT0KCQO", 
-        'oauth_version': "1.0"
-    }
+var nonce=randomString(32,'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
+
+var oauth_parameters = {
+    oauth_consumer_key : 'GTCdgD6hdEhLmAqcR9Plw',
+    oauth_nonce : nonce,
+    oauth_signature_method : 'HMAC-SHA1',
+    oauth_timestamp : unixtime,
+    oauth_token : '535348055-Rutf002vyJvOE6k85FtaTS0hR6XSIh9ussT0KCQO',
+    oauth_version : '1.0',
+    screen_name:'KCVVE',
+    callback: 'twitterCallback'
 };
+
+var unixtime=Math.round((new Date()).getTime() / 1000.0);
+var t_url = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
+var httpMethod = 'GET';
+var consumerSecret = 'sbkTfo3k5Lrm6K80UdcwIFGAdBfrE8UwPI0eUeP2Q';
+var tokenSecret = 'lY7m7ONTXMl2cfaLUXGtOkf4prS4lldm8OgofYuY';
+var signature = oauthSignature.generate(httpMethod, t_url, oauth_parameters, consumerSecret, tokenSecret, { encodeSignature: true});
+
+var config = '';
+
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+    return result;
+} 
 
 
 
@@ -41,10 +51,25 @@ angular.module('twitterfeed', [])
                     $scope.ready = false;
                     $scope.rankings = [];
 
-                    $scope.base_url = base_url;
-
-                    $http.get(twitter_api_url, config)
-                        .then(function (response) {
+                    $http.jsonp(twitter_api_url, {
+    headers: {
+        'Authorization':
+            'OAuth oauth_consumer_key="GTCdgD6hdEhLmAqcR9Plw",' +
+            'oauth_signature_method="HMAC-SHA1",' +
+            'oauth_timestamp='+unixtime +
+            'oauth_nonce='+nonce +
+            'oauth_version="1.0",' +
+            'oauth_token="535348055-Rutf002vyJvOE6k85FtaTS0hR6XSIh9ussT0KCQO",'+
+            'oauth_signature='+signature
+    },
+    params: {
+        screen_name: username, 
+        callback : "JSON_CALLBACK",
+        include_rts : true,
+        count: 20
+    }
+})
+                        .success(function (response) {
                             console.log(response);
                         });
 
