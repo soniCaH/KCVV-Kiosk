@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-    angular.bootstrap(document, ['footbel', 'instafeed']);
+    angular.bootstrap(document, ['footbel', 'instafeed', 'twitterfeed']);
 
     Reveal.initialize({
         controls: false,

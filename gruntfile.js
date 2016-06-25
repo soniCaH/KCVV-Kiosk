@@ -19,6 +19,7 @@ module.exports = function(grunt) {
 						'build/js/app.min.js': [
 							'assets/js/footbel.js',
 							'assets/js/instagram.js',
+							'assets/js/twitter.js',
 							'assets/js/kcvv.js',
 					]
 				}
@@ -35,6 +36,7 @@ module.exports = function(grunt) {
 						'build/js/app.min.js': [
 							'assets/js/footbel.js',
 							'assets/js/instagram.js',
+							'assets/js/twitter.js',
 							'assets/js/kcvv.js',
 					]
 				}

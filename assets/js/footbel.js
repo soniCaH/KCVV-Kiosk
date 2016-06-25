@@ -27,17 +27,25 @@ angular.module('footbel', [])
             templateUrl: 'ranking.tpl.html',
             link: function ($scope, element) { },
             controller: function ($scope, $timeout) {
-                $scope.ready = false;
-                $scope.rankings = [];
 
-                $scope.base_url = base_url;
+                function fetchData() {
+                    $scope.ready = false;
+                    $scope.rankings = [];
 
-                $http.get(base_url + '/ranking/prov/' + $scope.province + '/' +
-                    $scope.season + '/' + $scope.division, headers)
-                    .then(function (response) {
-                        $scope.rankings = response.data;
-                        $scope.ready = true;
-                    });
+                    $scope.base_url = base_url;
+
+                    $http.get(base_url + '/ranking/prov/' + $scope.province + '/' +
+                        $scope.season + '/' + $scope.division, headers)
+                        .then(function (response) {
+                            $scope.rankings = response.data;
+                            $scope.ready = true;
+                        });
+
+                    // Fetch rankings every 15 minutes.
+                    $timeout(fetchData, 15 * 60 * 1000);
+                }
+
+                fetchData();
             }
         };
     })
