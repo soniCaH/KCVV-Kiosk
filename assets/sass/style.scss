@@ -130,3 +130,29 @@ table.matches_overview__with_logo {
 		background-position: 50% 50%;
 	}
 }
+
+.reveal {
+	.twitter__image {
+		border: 0;
+		box-shadow: none;
+		height: 1.5em;
+		margin: 0;
+	}
+	
+	.twitter__title {
+		display: inline-block;
+	}
+
+	.tweet__wrapper {
+		background: #FFF;
+		border: 1px solid $highlightColor;
+		margin-bottom: 2em;
+		padding: 1em;
+	}
+
+	.tweet__created {
+		color: #CCC;
+		float: right;
+		font-style: italic;
+	}
+}

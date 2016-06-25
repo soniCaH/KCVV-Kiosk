@@ -1,1 +1,16 @@
-TWEET
+<span class="tcon-loader--spinner360" aria-label="loading" ng-show="!ready">
+  <span class="tcon-visuallyhidden">loading</span>
+</span>
+
+<div ng-repeat="tweet in tweets" class="tweet__wrapper">
+    <div class="tweet__author">
+        <img ng-src="{{tweet.user.profile_image_url}}" class="twitter__image"/>
+        {{tweet.user.name}}
+    </div>
+    
+    {{tweet.text}}
+
+    <span class="tweet__created">
+    {{tweet.created_at}}
+    </span>
+</div>
