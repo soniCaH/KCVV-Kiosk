@@ -9,7 +9,7 @@ $( document ).ready(function() {
         center: false,
         loop: true,
         shuffle: true,
-        autoSlide: 5000,
+        autoSlide: 15000, // 15 seconds per slide.
         viewDistance: 2,
         width: "100%",
         height: "100%",

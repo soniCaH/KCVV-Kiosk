@@ -102,6 +102,7 @@ angular.module('footbel', [])
                 season: '@season',
                 province: '@province',
                 logo: '@logo',
+                title: '@title',
                 matchday: '@matchday'
             },
             templateUrl: 'matches_overview.tpl.html',

@@ -4,7 +4,7 @@
 
 
 <div ng-repeat="(matchday, matches) in matchesPerDay track by $index" ng-if="matches">
-  <h2 ng-bind="'Matchday ' + matchday"></h2>
+  <h2 ng-bind="title + ' - Matchday ' + matchday"></h2>
 
   <table ng-show="ready" class="matches_overview" ng-class="{'matches_overview__with_logo': logo}">
     <tbody>
