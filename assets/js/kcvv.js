@@ -15,7 +15,8 @@ $( document ).ready(function() {
         height: "100%",
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'page', // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'slow', // default/fast/slow
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
