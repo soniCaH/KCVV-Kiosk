@@ -26,7 +26,7 @@ angular.module('footbel', [])
                     function(response) { 
                         if (currentBuild && currentBuild != response.data) {
                             // If a new jenkins build was done, refresh the page automatically.
-                            location.reload();
+                            location.reload(true);
                         }
                         else {
                             currentBuild = response.data;
