@@ -1,7 +1,6 @@
 angular.module('instafeed', [])
     .directive('instagramFeed', ['$http', '$compile', '$timeout', function ($http, $compile, $timeout) {
 
-
         function link(scope, element) {
 
             function fetchData() {
@@ -38,8 +37,8 @@ angular.module('instafeed', [])
                     });
 
 
-                // Fetch instagram every 60 minutes.
-                $timeout(fetchData, 60 * 60 * 1000);
+                // Fetch instagram every 10 minutes.
+                $timeout(fetchData, 10 * 60 * 1000);
             }
 
             fetchData();

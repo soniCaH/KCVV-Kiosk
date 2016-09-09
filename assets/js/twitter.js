@@ -5,7 +5,6 @@
 
 angular.module('twitterfeed', [])
     .directive('twitterFeed', function ($http) {
-        console.log('test');
         return {
             restrict: 'EA',
             transclude: true,
