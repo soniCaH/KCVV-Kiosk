@@ -29,16 +29,14 @@ angular.module('instafeed', [])
                     .success(
                     function (data, status, headers, config) {
                         insertFeed(data);
-                        console.log('Got instafeed');
                     })
                     .error(
                     function (data, status, headers, config) {
                         // Error.
                     });
 
-
-                // Fetch instagram every 10 minutes.
-                $timeout(fetchData, 10 * 60 * 1000);
+                // Fetch instagram every 5 minutes.
+                $timeout(fetchData, 5 * 60 * 1000);
             }
 
             fetchData();
