@@ -34,8 +34,8 @@ angular.module('footbel', [])
                     }
                 );
 
-                // Check every hour (60 * 60 * 1000).
-                setTimeout(refreshOnNewVersion, 6000);
+                // Check every 10 minutes (10 * 60 * 1000).
+                setTimeout(refreshOnNewVersion, 600000);
             }
 
             // Initialize loop.
