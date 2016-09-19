@@ -98,9 +98,18 @@ table.matches_overview__with_logo {
 }
 
 .reveal {
-    table td {
-        font-weight: bold;
-        padding: .25em;
+    table {
+        td {
+            font-weight: bold;
+            padding: .35em;
+        }
+
+        &.matches_next, &.matches_prev {
+            td {
+                padding: 0.75em;
+            }
+        }
+
     }
 
     // Hide play/pause + progress indicator (!important to overrule inline CSS).
