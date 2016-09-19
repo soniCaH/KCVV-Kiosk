@@ -100,7 +100,7 @@ table.matches_overview__with_logo {
 .reveal {
     table td {
         font-weight: bold;
-        padding: .5em;
+        padding: .25em;
     }
 
     // Hide play/pause + progress indicator (!important to overrule inline CSS).
@@ -144,6 +144,7 @@ table.matches_overview__with_logo {
         border: 1px solid $highlightColor;
         margin-bottom: 2em;
         padding: 1em;
+        font-weight: bold;
     }
 
     .tweet__created {
