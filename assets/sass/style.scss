@@ -45,7 +45,6 @@ section.has-dark-background {
     }
 }
 
-
 // Theme template ------------------------------
 @import "../../revealjs/css/theme/template/theme.scss";
 // ---------------------------------------------
@@ -99,6 +98,11 @@ table.matches_overview__with_logo {
 }
 
 .reveal {
+    table td {
+        font-weight: bold;
+        padding: .75em;
+    }
+
     // Hide play/pause + progress indicator (!important to overrule inline CSS).
     .playback, .progress {
         display: none !important;
