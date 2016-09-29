@@ -13,6 +13,36 @@ var headers = {
 };
 
 angular.module('footbel', [])
+    // Kickstart application.
+    .run( 
+        ['$http', 
+        function($http) { 
+            // Initialize/hold current version of the build.
+            var currentBuild = 0;
+
+            function refreshOnNewVersion() {
+                // Version.txt is automatically writte by Jenkins and holds the latest build number (integer only).
+                $http.get('/version.txt').then(
+                    function(response) { 
+                        if (currentBuild && currentBuild != response.data) {
+                            // If a new jenkins build was done, refresh the page automatically.
+                            location.reload(true);
+                        }
+                        else {
+                            currentBuild = response.data;
+                        } 
+                    }
+                );
+
+                // Check every 10 minutes (10 * 60 * 1000).
+                setTimeout(refreshOnNewVersion, 600000);
+            }
+
+            // Initialize loop.
+            refreshOnNewVersion();
+        }
+        ]
+    )
     // General ranking for a complete division.
     .directive('ranking', function ($http) {
         return {
