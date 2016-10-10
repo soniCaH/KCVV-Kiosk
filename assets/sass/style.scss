@@ -131,7 +131,7 @@ table.matches_overview__with_logo {
 
             &.sponsors--large {
                 padding: 0;
-                
+
                 img {
                     display: block;
                     max-width: 100%;
@@ -149,6 +149,11 @@ table.matches_overview__with_logo {
                     margin: 3% !important;
                     float: left;
                 }
+            }
+
+            .no-border {
+                border: 0;
+                box-shadow: none;
             }
         }
 
