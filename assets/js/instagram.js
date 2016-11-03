@@ -15,7 +15,7 @@ angular.module('instafeed', [])
                         if (!videoSrc) {
                             element.append('<div class="insta-grid__media insta-grid__media--image" style="background-image: url(' + imgSrc + ');"></div>');
                         } else {
-                            element.append('<div class="insta-grid__media insta-grid__media--image"><video controls class="ig-media ig-media--video" poster="' + imgSrc + '"><source src="' + videoSrc + '" type="video/mp4"></video></div>');
+                            element.append('<div class="insta-grid__media insta-grid__media--video"><video data-ignore autoplay loop muted class="ig-media ig-media--video" poster="' + imgSrc + '"><source src="' + videoSrc + '" type="video/mp4"></video></div>');
                         }
                     }
 

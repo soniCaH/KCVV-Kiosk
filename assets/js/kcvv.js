@@ -28,4 +28,5 @@ $( document ).ready(function() {
           { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
+
 });
