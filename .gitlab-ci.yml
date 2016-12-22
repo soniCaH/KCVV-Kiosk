@@ -1,6 +1,6 @@
 build:
   stage: build
   script:
-    - "sudo -u footbalisto gitlab-ci.sh kiosk $CI_BUILD_NAME"
+    - "sudo -u footbalisto gitlab-ci.sh kiosk $CI_BUILD_ID"
   only:
     - master
