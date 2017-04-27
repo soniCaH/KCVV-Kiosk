@@ -44,6 +44,11 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		csscomb: {
+			files: { 
+				'assets/style.scss': ['assets/style.scss'],
+			}
+    	},
 		sass: {
 			dev: {
 				options: {
@@ -90,7 +95,7 @@ module.exports = function (grunt) {
 			},
 			sass: {
 				files: ['assets/sass/**/*.scss'],
-				tasks: ['sass:dev'],
+				tasks: ['csscomb', 'sass:dev'],
 			},
 			imagemin: {
 				files: ['assets/images/**/*.{png,jpg,gif,svg}'],
@@ -102,8 +107,8 @@ module.exports = function (grunt) {
 	// RUN BY DEFAULT
 	grunt.registerTask('default', ['build:dev', 'watch']);
 
-	grunt.registerTask('build:dist', ['clean', 'sass:dist', 'uglify:dist', 'imagemin']);
-	grunt.registerTask('build:dev', ['clean', 'sass:dev', 'uglify:dev', 'imagemin']);
+	grunt.registerTask('build:dist', ['clean', 'csscomb', 'sass:dist', 'uglify:dist', 'imagemin']);
+	grunt.registerTask('build:dev', ['clean', 'csscomb', 'sass:dev', 'uglify:dev', 'imagemin']);
 
 	// RUN TASKS
 	grunt.loadNpmTasks('grunt-contrib-clean');
@@ -112,4 +117,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-csscomb');
 };

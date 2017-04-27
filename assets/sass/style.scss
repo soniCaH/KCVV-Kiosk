@@ -6,8 +6,8 @@
 
 
 // Default mixins and settings -----------------
-@import "../../revealjs/css/theme/template/mixins.scss";
-@import "../../revealjs/css/theme/template/settings.scss";
+@import '../../revealjs/css/theme/template/mixins.scss';
+@import '../../revealjs/css/theme/template/settings.scss';
 // ---------------------------------------------
 
 
@@ -16,13 +16,10 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #fff;
-
+$backgroundColor: #FFF;
 $mainColor: #222;
 $headingColor: #222;
-
-$highlightColor: #a6e22e;
-
+$highlightColor: #A6E22E;
 $mainFontSize: 24px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
@@ -30,36 +27,44 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2a76dd;
+$linkColor: #2A76DD;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
-
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
 
 section.has-dark-background {
-    &, h1, h2, h3, h4, h5, h6 {
-        color: #fff;
-    }
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #FFF;
+  }
 }
 
 // Theme template ------------------------------
-@import "../../revealjs/css/theme/template/theme.scss";
+@import '../../revealjs/css/theme/template/theme.scss';
 // ---------------------------------------------
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 body {
   font-family: 'Roboto', Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -79,97 +84,99 @@ table {
 
 
 table.matches_overview__with_logo {
-    td {
-        height: 50px;
-        padding: 0;
-        vertical-align: middle;
+  td {
+    height: 50px;
+    padding: 0;
+    vertical-align: middle;
 
-        &.matches_overview__logo {
-            text-align: center;
+    &.matches_overview__logo {
+      text-align: center;
 
-            img {
-                border: 0;
-                box-shadow: none;
-                max-width: 50px;
-                max-height: 50px;
-                height: auto;
-                width: auto;
-            }
-        }
-
-        &.matches_overview__name {
-            text-align: center;
-        }
+      img {
+        border: 0;
+        box-shadow: none;
+        max-width: 50px;
+        max-height: 50px;
+        height: auto;
+        width: auto;
+      }
     }
 
+    &.matches_overview__name {
+      text-align: center;
+    }
+  }
 }
 
 .reveal {
-    table {
-        td {
-            font-weight: bold;
-            padding: .35em;
-        }
-
-        &.matches_next, &.matches_prev {
-            td {
-                padding: 0.75em;
-            }
-        }
-
+  table {
+    td {
+      font-weight: bold;
+      padding: .35em;
     }
 
-    // Hide play/pause + progress indicator (!important to overrule inline CSS).
-    .playback, .progress {
-        display: none !important;
+    &.matches_next,
+    &.matches_prev {
+      td {
+        padding: .75em;
+      }
     }
+  }
 
-.slides {
+  // Hide play/pause + progress indicator (!important to overrule inline CSS).
+  .playback,
+  .progress {
+    display: none !important;
+  }
+
+  .slides {
     width: 100% !important;
     height: 100% !important;
 
     section {
-        background-color: white;
-        padding: 2em;
+      background-color: white;
+      padding: 2em;
 
-        &:not(.stack):after, &:not(.stack):before {
-            display: none !important;
+      &:not(.stack):after,
+      &:not(.stack):before {
+        display: none !important;
+      }
+
+      &.sponsors--large {
+        padding: 0;
+
+        img {
+          display: block;
+          max-width: 100%;
+          margin: 3vh auto !important;
+          float: none;
+          width: auto;
+          max-height: 44vh;
+          height: 44vh;
         }
+      }
 
-        &.sponsors--large {
-            padding: 0;
-
-            img {
-                display: block;
-                max-width: 100%;
-                margin: 3vh auto !important;
-                float: none;
-                width: auto;
-                max-height: 44vh;
-                height: 44vh;
-            }
+      &.sponsors--medium {
+        img {
+          width: 44%;
+          margin: 3% !important;
+          float: left;
         }
+      }
 
-        &.sponsors--medium {
-            img {
-                width: 44%;
-                margin: 3% !important;
-                float: left;
-            }
-        }
-
-        .no-border {
-            border: 0;
-            box-shadow: none;
-        }
+      .no-border {
+        border: 0;
+        box-shadow: none;
+      }
     }
 
-    .instafeed, .twitterfeed {
+    .instafeed,
+    .twitterfeed {
       width: 100%;
       height: 100%;
       padding: 0;
     }
-}
+  }
 }
 
 /* --------------------------------------------------------------
@@ -190,8 +197,8 @@ table.matches_overview__with_logo {
   align-content: center;
   .tweet {
     flex-basis: 31%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.15);
+    background: #FFF;
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
     padding: 60px 80px 100px 80px;
     text-align: left !important;
     position: relative;
@@ -229,11 +236,12 @@ table.matches_overview__with_logo {
       height: 40px;
       line-height: 40px;
       padding-left: 100px;
-      background-color: #efefef;
+      background-color: #EFEFEF;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
-    &:nth-child(2), &:nth-child(5) {
+    &:nth-child(2),
+    &:nth-child(5) {
       transform: translateY(-50px);
     }
     &:nth-child(-n+3) {
@@ -271,7 +279,7 @@ table.matches_overview__with_logo {
       width: auto;
       height: auto;
       -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
       background-size: cover;
     }
   }
@@ -282,5 +290,5 @@ table.matches_overview__with_logo {
 }
 
 .reveal > .slides > section > section {
-    transform-style: flat;
+  transform-style: flat;
 }
