@@ -3,7 +3,7 @@
  * Angular directives and filters.
  */
 
-var base_url = 'http://api.footbalisto.be/api';
+var base_url = 'http://fb.van-ransbeeck.be/api';
 var api_key = '0e6d5ea524fa66cf4f6f8d1b85b253cd';
 
 var headers = {
