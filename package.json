@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "csscomb": "^4.0.1",
-    "grunt": "~1.0.0",
+    "grunt": "~1.5.3",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-imagemin": "^1.0.1",
