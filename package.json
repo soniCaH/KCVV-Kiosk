@@ -2,7 +2,7 @@
   "name": "kcvvelewijt",
   "version": "1.0.0",
   "devDependencies": {
-    "csscomb": "^4.0.1",
+    "csscomb": "^4.2.0",
     "grunt": "~1.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-compass": "^1.1.1",
